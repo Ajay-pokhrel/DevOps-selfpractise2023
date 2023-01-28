@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Build Application') {
             steps {
-                sh 'mvn -f jenkins/java-tomcat-sample/pom.xml clean package'
+                sh 'mvn -f jenkins/jenkins-java-tomcat-sample/pom.xml clean package'
             }
             post {
                 success {
@@ -23,7 +23,7 @@ pipeline {
                 echo "Building docker image"
                 sh '''
                 original_pwd=$(pwd -P)
-                cd jenkins/java-tomcat-sample
+                cd jenkins/jenkins-java-tomcat-sample
                 docker build -t localtomcatimg:$BUILD_NUMBER .
                 cd $original_pwd
                 sh '''
