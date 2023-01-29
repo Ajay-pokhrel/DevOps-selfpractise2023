@@ -1,4 +1,4 @@
-pipeline {
+ipipeline {
     agent {
         label 'builtinNode'
     }
@@ -75,7 +75,7 @@ $BUILD_URL
 and verify the details.
 
 Regards,
-DevOps Team""", cc: '', from: '', replyTo: '', subject: 'BUILD SUCCESS NOTIFICATION', to: 'devopsuryaraj@gmail.com'
+DevOps Team""", cc: '', from: '', replyTo: '', subject: 'BUILD SUCCESS NOTIFICATION', to: 'ajayrajpokhrel233@gmail.com'
         }
         failure {
             mail bcc: '', body: """Hi Team,
@@ -87,7 +87,7 @@ $BUILD_URL
 and verify the details.
 
 Regards,
-DevOps Team""", cc: '', from: '', replyTo: '', subject: 'BUILD FAILED NOTIFICATION', to: 'devopsuryaraj@gmail.com'
+DevOps Team""", cc: '', from: '', replyTo: '', subject: 'BUILD FAILED NOTIFICATION', to: 'ajayrajpokhrel233@gmail.com'
         }
     }
 }
