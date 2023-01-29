@@ -16,7 +16,7 @@ ipipeline {
         }
         stage('Create Tomcat Image') {
             agent {
-                label 'testnode'
+                label 'tomcatslavenode'
             }
             steps {
                 copyArtifacts filter: '**/*.war', fingerprintArtifacts: true, projectName: env.JOB_NAME, selector: specific(env.BUILD_NUMBER)
@@ -31,7 +31,7 @@ ipipeline {
         }
         stage('Deploy to Stagging Env') {
             agent {
-                label 'testnode'
+                label 'tomcatslavenode'
             }
             steps {
                 echo "Running app on stagging env"
